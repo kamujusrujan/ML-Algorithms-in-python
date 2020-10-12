@@ -7,4 +7,5 @@ Models:
 
 
 References :
-	
+
+Tensorflow GradientTape : https://medium.com/analytics-vidhya/tf-gradienttape-explained-for-keras-users-cc3f06276f22	
