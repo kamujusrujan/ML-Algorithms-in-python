@@ -2,9 +2,12 @@ Error criteria :  GINI , entropy
 
 
 
-Should implement the splitting of data and make sure it doesnt exceed depth 
+Completed implementing basic struchure checked with small dataset needs more polish in struchure and complexity as well
 
 
+Implement : predict and tostirng for checking
+
+assert checking and edge case validations 
 
 Functions:(hella complex method)
 
