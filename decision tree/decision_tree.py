@@ -36,23 +36,24 @@ class DecisionTree:
 
 
 	def predict(self,point):
+			
 		pass
 
 	def to_string(self): 
-		queue = []
 		temp_root = self.root
-		s = ""
+		queue = [] 
 		queue.append(temp_root)
-		while len(queue) > 0:
-			temp = queue.pop()
-			s += (str(temp.feature))
-			s += '\n'
-			if temp.right != None : 
-				queue.append(temp.right)
-			if temp.left != None : 
-				queue.append(temp.left)
-
-		return  s
+		tree_rep = ""
+		while len(queue) > 0 : 
+			size  =  len(queue)
+			s =  ""
+			for i in range(size) : 
+				node = queue.pop(0)	
+				s += str(node.feature) + " "
+				if node.right != None : queue.append(node.right)
+				if node.left != None : queue.append(node.left)
+			tree_rep += s + '\n'
+		return tree_rep
 		pass
 
 
