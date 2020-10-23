@@ -24,6 +24,9 @@ def start():
 
 
 avg = []
-for i in range(10):
-	avg.append(start())
+try: 
+	for i in range(10):
+		avg.append(start())
+except: 
+	print('err')
 print(avg,np.mean(avg))
