@@ -28,8 +28,8 @@ class DecisionTree:
 		# find best feature to split
 		if len(set(labels)) == 1: return Node(None,None,labels[0])
 
-		# if features[0].count(None) == len(features[0])  :	
-		# 	return Node(None,None,labels[0]) 
+		if features[0].count(None) == len(features[0])  :	
+			return Node(None,None,labels[0]) 
 
 		feature, condition = find_best_feature(features, labels)
 		# assign it to the root and split the data
@@ -40,6 +40,7 @@ class DecisionTree:
 		# train left node
 		if len(right_labels) > 0:
 			root.right = self.__train(right_features, right_labels, depth + 1)
+			
 		# train right node
 		if len(left_labels) > 0:
 			root.left = self.__train(left_features, left_labels, depth + 1)
@@ -78,11 +79,11 @@ class DecisionTree:
 					queue.append(node.right)
 				if node.left != None:
 					queue.append(node.left)
-			print(depth, s)
+			# print(depth, s)
 			depth +=1
 
 			tree_rep += s + '\n'
-		return "tree_rep"
+		return tree_rep
 		pass
 
 

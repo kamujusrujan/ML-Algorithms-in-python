@@ -2,7 +2,7 @@ Repo for Machine learning algorithms from scratch
 
 Models:
 
-	1.Decision Tree
+	1.Decision Tree : Done implementing binary decision tree
 
 	2.KNN 
 
