@@ -17,10 +17,8 @@ def start():
 	dt.fit(X_train, y_train)
 	true = 0
 	for i in range(len(X_test)):
-		# print(y_test[i])
 		true +=1 if dt.predict(X_test[i]) == y_test[i] else 0
 	return true/len(y_test)
-	# print(dt.to_string())
 
 
 avg = []
