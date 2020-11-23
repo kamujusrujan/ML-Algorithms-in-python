@@ -6,7 +6,9 @@ Models:
 
 	2.KNN 
 
-	3.Basic Perceptron
+	3. Gaussian Model (Probabilistic model)
+
+	4.Basic Perceptron
 
 
 
