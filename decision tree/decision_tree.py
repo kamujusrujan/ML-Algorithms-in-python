@@ -33,7 +33,7 @@ class DecisionTree:
 
 		feature, condition = find_best_feature(features, labels)
 		# assign it to the root and split the data
-		root = Node(feature, condition , labels[0] if len(set(labels)) == 1 else None	 )	
+		root = Node(feature, condition , labels[0] if len(set(labels)) == 1 else None)	
 		
 		right_features, right_labels, left_features, left_labels = split_data(
 			features, labels, feature, condition)
@@ -49,7 +49,8 @@ class DecisionTree:
 		pass
 
 	def predict(self, point):
-		if len(point) != self.feature_length : raise  Exception("Different size of feature points")
+		if len(point) != self.feature_length : 
+			raise  Exception("Different size of feature points")
 		#traversing through the tree until homogenous node or leaf
 		temp_root = self.root
 		while temp_root.feature != None:
