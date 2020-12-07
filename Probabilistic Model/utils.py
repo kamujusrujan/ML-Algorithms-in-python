@@ -1,11 +1,7 @@
 from collections import Counter
-
-
-
-
+import pandas as pd
 
 class ProbabilityModel():
-
 
 	class Probability():
 		def __init__(self,A,B,data):
